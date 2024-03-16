@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiWeb</title>
+    <script src="https://kit.fontawesome.com/b8991598b2.js"></script>
+    <link rel="stylesheet" href="/css_files/css_main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap-grid.min.css"> 
+</head>
+
+<body>
+    <!--Навигация-->
+    <nav class="navbar">
+        <div class="container">
+            <a href="" class="navbar-brand"><img src="./image/AiWeb.png" class="image" alt="LOGO"></a>
+
+            <div class="navbar-wrap">
+                <ul class="navbar-menu">
+                    <li><a class="he" href="./info.html">Информация</a></li>
+                    <li><a class="he" href="./catalog.html">Каталог</a></li>
+                    <li><a class="he" href="./tech support.html">Техподержка</a></li>
+                </ul>
+            </div>
+
+            <button class="menu-button">
+              <div class="menu-bar">  
+                <span class="line top_span"></span>
+                <span class="line middle_span"></span>
+                <span class="line bottom_span"></span>
+              </div>
+            </button>
+        </div>
+    </nav>
+
+    <div class="dropdown_menu">
+        <ul>
+            <li><a href="./info.html">Информация</a></li>
+            <li><a href="./catalog.html">Каталог</a></li>
+            <li><a href="./tech support.html">Техподержка</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="description">
+            <h1>AiWeb</h1>
+            <p>
+                Сайт на котором вы можете найти нужные под ваши задачи нейросети и узнать про них больше.
+            </p>
+            <br>
+            <button class="custom-btn btn-16"><a class="he" href="./catalog.html">Перейти к каталогу</a></button>
+        </div>
+
+    </main>
+
+    <footer>
+      <div class="container">
+        <a href="#">jjj</a>
+      </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.menu-bar')
+        const dropdown_menu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function() {
+            dropdown_menu.classList.toggle("open")
+            toggleBtn.classList.toggle("menu_open")
+        }
+    </script>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/ForGallery.js"></script>
+</body>
+</html>
