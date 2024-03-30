@@ -1,0 +1,289 @@
+@import url(https://allfont.net/allfont.css?fonts=raleway-medium);
+
+body{
+    background-color: #f8f9fa;
+    font-family: Calibri;
+}
+
+li {
+    list-style: none;
+}
+
+/*header*/
+.navbar{
+    position: absolute;
+    left: 0;
+    top: 0;  
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    box-shadow: 0 1px 8px gray;
+}
+
+.navbar .container {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 20px;
+    margin-bottom: none;
+}
+
+.navbar-menu li {
+    display: inline-block;
+    padding-left: 50px;
+    font-size: 1.2rem;
+    
+}
+
+.image {
+    position: relative;
+    left: 40px;
+    scale: 3;
+}
+
+
+/* header, но это кнопка менюшки*/
+
+.line {
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+    transform-origin: left;
+    transition: all .2s ease;
+}
+
+.menu-bar {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.menu-button {
+    border: none;
+    background: none;
+}
+
+.menu-button:hover > .line {
+    opacity: 0;
+}
+
+.menu-bar.menu_open .middle_span {
+    opacity: 0;
+}
+
+.menu-bar.menu_open .top_span {
+    transform: rotate(45deg);
+}
+
+.menu-bar.menu_open .bottom_span {
+    transform: rotate(-45deg);
+}
+/* header, но это это менюшка ДО срабатывания*/
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 1;
+    box-shadow:
+     1px 0px 20px 0px #302f2f;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.dropdown_menu li {
+    display: flex;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.dropdown_menu a {
+    display: flex;
+    width: auto;
+    margin: 0 auto;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 2rem;
+}
+
+.dropdown_menu a:active {
+    scale: 0.95;
+}
+
+/* https://www.youtube.com/shorts/i8b7LIa8ioQ */
+
+li .he {
+    display: inline-block;
+    color: #fff;
+    opacity: 0.8;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    background: linear-gradient(to right, transparent, transparent),
+     linear-gradient(to right, #fff, #fff);
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms;
+}
+
+li .he:hover {
+    opacity: 1;
+    background-size: 0 3px, 100% 2px;
+}
+
+.dropdown_menu.open ul {
+    padding: 0;
+}
+
+.dropdown_menu.open ul li a:active {
+    scale: 0.9;
+}
+
+.navbar-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+.navbar-brand img{
+    width: 50px;
+    padding-left: 10px;
+    transition: all .3s ease-in-out;
+}
+
+/* --------------------------------------------------------------------- */
+
+/* единственное, что есть на странице -_- */
+
+main {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10%;
+    justify-content: center; 
+}
+
+.description {
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.description h1 {
+    font-size: 5em;
+    font-family: 'Raleway Medium', arial;
+    padding: auto;
+}
+
+.description p {
+    width: 400px;
+    font-size: 1.5rem;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    width: auto;
+}
+
+.custom-btn {
+    width: 180px;
+    height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9em;
+    font-weight: 525;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  .btn-16 {
+    border: none;
+    color: #000;
+    z-index: 1;
+  }
+  .btn-16:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+  }
+  .btn-16:hover {
+    color: #000;
+  }
+  .btn-16:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .btn-16:active {
+    top: 2px;
+  }
+  .btn-16 a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  /* footer */
+
+footer {
+    position: absolute;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+
+  /*------------------------media------------------------*/
+
+  @media(max-width: 820px){
+    .menu-bar {
+        display: flex;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+    .dropdown_menu.open {
+        width: 100%;
+    }
+    
+  }
