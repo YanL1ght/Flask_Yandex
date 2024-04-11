@@ -18,10 +18,6 @@ class User(db_session.SqlAlchemyBase, UserMixin):
         self.hashed_password = generate_password_hash(password)
 
     def check_password(self, password):
-        print()
-        print()
-        print(self.hashed_password)
-        print(password)
         return check_password_hash(self.hashed_password, password)
 
     def __repr__(self):

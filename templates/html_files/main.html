@@ -6,19 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="./static/css_files/css_main.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css_files/css_main.css">
 </head>
 
 <body>
     <!--Навигация-->
     <nav class="navbar">
         <div class="container">
-            <a href="" class="navbar-brand"><img src="#" class="image" alt="LOGO"></a>
-
             <div class="navbar-wrap">
                 <ul class="navbar-menu">
-                    <li><a class="he" type="submit" href="#" name="a_info">Информация</a></li>
                     <li><a class="he" type="submit" href="/catalog" name="a_catalog">Каталог</a></li>
+                    <li><a class="he" type="submit" href="#" name="a_info">Информация</a></li>
                     <li><a class="he" type="submit" href="#" name="a_support">Техподержка</a></li>
                 </ul>
             </div>
@@ -30,6 +28,8 @@
                 <span class="line bottom_span"></span>
               </div>
             </button>
+
+            <div class="account"><a type="submit" href="{{ link }}">{{ name }}</a></div>
         </div>
     </nav>
 
@@ -55,12 +55,12 @@
         </div>
 
     </main>
-
+<!-- 
     <footer>
       <div class="container">
         <a href="#">jjj</a>
       </div>
-    </footer>
+    </footer> -->
 
     <script>
         const toggleBtn = document.querySelector('.menu-bar')

@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../static/css_files/css_catalog.css"> <!-- ./static/css_files/css_search.css -->
-    <title>Search</title>
-</head>
-<body>
+{% extends "html_files/base.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="../../static/css_files/css_catalog.css">
     <nav class="navi_search">
         <div class="search_bar">
             <input type="text" class="search" name="search_input">
@@ -29,7 +24,4 @@
                 {% endfor %}
             </div>
     </main>
-
-    
-</body>
-</html>
+{% endblock %}
