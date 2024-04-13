@@ -13,6 +13,7 @@ class User(db_session.SqlAlchemyBase, UserMixin):
     email = sqlalchemy.Column(sqlalchemy.String,
                               index=True, unique=True, nullable=True)
     hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    product = sqlalchemy.orm.relationship("Products", back_populates='users')
 
     def set_password(self, password):
         self.hashed_password = generate_password_hash(password)
@@ -22,4 +23,5 @@ class User(db_session.SqlAlchemyBase, UserMixin):
 
     def __repr__(self):
         return '<User {}, email {}, password {}, xz {}>'.format(
-            self.name, self.email, generate_password_hash(self.hashed_password), check_password_hash(self.hashed_password, self.hashed_password))
+            self.name, self.email, generate_password_hash(self.hashed_password), check_password_hash(
+                self.hashed_password, self.hashed_password))

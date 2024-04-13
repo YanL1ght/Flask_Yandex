@@ -1,0 +1,41 @@
+{% extends "html_files/base.html" %}
+
+{% block content %}
+<h1>Добавление продукта на сайт</h1>
+{% if current_user.is_authenticated %}
+  <form action="" method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.title.label }}<br>
+            {{ form.title(class="form-control") }}<br>
+            {% for error in form.title.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.description.label }}<br>
+            {{ form.description(class="form-control") }}<br>
+            {% for error in form.description.errors %}
+                <p content="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p>
+        <p>{{ form.prise.label }}<br>
+            {{ form.prise() }}</p>
+        <p>
+            {{ form.file.label }} <br>
+            <input type="file" class="form-control-file" id="photo" name="file1">
+            <input type="file" class="form-control-file" id="photo2" name="file2">
+        </p>
+        <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+        {{message}}
+    </form>
+{% else %}
+    <h2>Данная опция доступна только авторизованным пользователям</h2>
+    <a href="/login">Войти</a>
+{% endif %}
+
+{% endblock %}

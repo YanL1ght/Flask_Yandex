@@ -26,7 +26,17 @@
               </div>
             </button>
 
-            <div class="account"><a type="submit" href="{{ link }}">{{ name }}</a></div>
+            <div class="account">
+                    {% if current_user.is_authenticated %}
+                        <a type="submit" href="/logout">
+                            {{ current_user.name }}
+                        </a>
+                    {% else %}
+                        <a type="submit" href="/login">
+                            Sing In
+                        </a>
+                    {% endif %}
+            </div>
         </div>
     </nav>
 
