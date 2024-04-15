@@ -27,8 +27,7 @@
             {{ form.prise() }}</p>
         <p>
             {{ form.file.label }} <br>
-            <input type="file" class="form-control-file" id="photo" name="file1">
-            <input type="file" class="form-control-file" id="photo2" name="file2">
+            <input type="file" class="form-control-file" id="photo" name="file" multiple /> <br><br>
         </p>
         <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
         {{message}}

@@ -49,7 +49,7 @@ main {
 /* блоки с ии */
 
 
-.post-ai{
+.post-item{
     display: block;
     background-color: #fff;
     color: #000;
@@ -57,7 +57,7 @@ main {
     padding-bottom: 3%;
 }
 
-.post-ai img{
+.post-item img{
     width: 100%;
     height: 100%;
     padding: 0;
@@ -70,14 +70,20 @@ main {
     margin: 0 auto;
 }
 
+.item-image {
+    width: 100px;
+    height: 40px;
+}
+
 .post-button{
     display: inline-block;
     background-color: #ffffff;
     border: 0;
     margin: 2.3%;
     overflow: hidden;
+    height: 10px;
     padding: 0 0.5%;
-    width: 20%;
+    width: 40%;
 }
 
 @media(max-width: 350px) {
@@ -117,7 +123,7 @@ main {
 
 @media(max-width: 1280px){
     .post-button {
-        width: 45%;
+        width: 49%;
     }
 
     .item_style {

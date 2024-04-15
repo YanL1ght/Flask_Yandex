@@ -14,13 +14,21 @@
     </nav>
     <main>
             <div class="post-itm">
-                 {% for item in items %}
-                    <button class="post-button">
-                        <div class="post-ai">
-                          <img src="../../static/img/image (2).png" alt="ai">
-                          <p>{{ item }}</p>
+                 {% for item in items.keys() %}
+                    {% set file = item.files.split(':')[0] %}
+                    <a class="post-button">
+                        <div class="post-item">
+                          <div class="item_image">
+                            <img src="static/img/product's_image/{{file}}" alt="{{file}}" sizes="(max-width: 600px) 200px, 50vw">
+                          </div>
+                          {% if items[item] > 35 %}
+                            <h3>{{ item.title[:34] }}...</h3>
+                          {% else %}
+                            <h3>{{ item.title }}</h3>
+                          {% endif %}
+                          <p>{{ item.prise }}</p>
                         </div>
-                     </button>
+                     </a>
                 {% endfor %}
             </div>
     </main>
