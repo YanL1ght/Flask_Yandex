@@ -2,19 +2,10 @@
 
 {% block content %}
     <link rel="stylesheet" href="../../static/css_files/css_catalog.css">
-    <nav class="navi_search">
-        <form class="search_bar" style="width: 230px; height: 40px;" method="post">
-            <input type="text" class="search" name="search_input">
-            <button type="submit" class="post_search" name="search_button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                </svg>
-            </button>
-        </form>
-    </nav>
     <main>
-            <div class="post-itm">
-                 {% for item in items.keys() %}
+            <div class="post-itm" style="display: flex; ">
+                {% for items in lst %}
+                  {% for item in items.keys() %}
                     {% set file = item.files.split(':')[0] %}
                     <a href="/product/{{item.id}}" class="linki" style="text-decoration: none;"> <!-- post-button --->
                               <div class="card" style="width: 18rem;">
@@ -36,6 +27,7 @@
                                   </div>
                               </div>
                      </a>
+                  {% endfor %}
                 {% endfor %}
             </div>
     </main>

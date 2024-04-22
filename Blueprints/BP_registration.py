@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, redirect
 from data.login_form import RegistForm
 from data.db_session import *
 from data.users import User
+from data.cart import Cart
 from flask_login import login_user
 
 blueprint = Blueprint(
@@ -30,12 +31,16 @@ def registration():
                         new_user.email = form.email.data
                         new_user.set_password(password)
 
-                        login_user(new_user, remember=form.remember_me.data)
-
                         db_sess.add(new_user)
                         db_sess.commit()
 
-                        red.set_cookie('User', str(form.name.data), max_age=60 * 60 * 24 * 30)
+                        cart = Cart()
+                        cart.user_id = db_sess.query(User.id).filter(User.name == new_user.name).first()[0]
+                        cart.products = ''
+                        db_sess.add(cart)
+                        db_sess.commit()
+
+                        login_user(new_user, remember=form.remember_me.data)
 
                         return red
                     return render_template('html_files/registration.html',

@@ -22,7 +22,6 @@ def login():
         if user and check_password_hash(user.hashed_password, form.password.data):
             red = redirect("/")
             login_user(user, remember=form.remember_me.data)
-            red.set_cookie('User', str(user.name), max_age=60 * 60 * 24 * 30)
             return red
         return render_template('html_files/login.html',
                                message="Неправильный логин или пароль",
@@ -34,6 +33,5 @@ def login():
 @login_required
 def logout():
     redi = redirect("/")
-    redi.set_cookie('User', '', max_age=0)
     logout_user()
     return redi

@@ -1,5 +1,4 @@
-from flask import Blueprint, request, render_template
-from simply_functions import cookie_op
+from flask import Blueprint, render_template
 
 blueprint = Blueprint(
     'news_api',
@@ -8,11 +7,6 @@ blueprint = Blueprint(
 )
 
 
-@blueprint.route('/', methods=["GET", 'POST'])
+@blueprint.route('/')
 def home():
-    visible_name, link = cookie_op()
-    if request.method == 'GET':
-        return render_template('/html_files/main.html', name=visible_name, link=link)
-    elif request.method == 'POST':
-        print(request.form['a_catalog'])
-        print(request.form['a_catalog'])
+    return render_template('/html_files/main.html')

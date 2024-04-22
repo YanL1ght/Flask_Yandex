@@ -5,14 +5,20 @@ body{
     padding: 0;
 }
 
+a {
+    color: black;
+}
+
 li {
     list-style: none;
 }
 
 .navi_search {
     display: flex;
-    width: 30%;
-    height: 10%;
+    position: relative;
+    padding-top: 100px;
+    width: 10%;
+    height: 4%;
     margin: 0 auto;
     justify-content: center;
 }
@@ -26,6 +32,7 @@ li {
     display: flex;
     background-color: gray;
     border-radius: 5px;
+    top: 10px;
     padding: 5px 15px;
     justify-content: center;
 }
@@ -57,15 +64,9 @@ main {
     padding-bottom: 3%;
 }
 
-.post-item img{
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    border-radius: 10px;
-}
-
 .post-itm {
+    display: flex;
+    justify-content: center;
     width: auto;
     margin: 0 auto;
 }
@@ -79,64 +80,13 @@ main {
     display: inline-block;
     background-color: #ffffff;
     border: 0;
+    color: black;
     margin: 2.3%;
     overflow: hidden;
-    height: 10px;
     padding: 0 0.5%;
-    width: 40%;
+    text-decoration: none;
 }
 
-@media(max-width: 350px) {
-    .navi_search{
-        width: 60px;
-    }
-}
-
-
-@media(min-width: 451px){
-    .search {
-        width: 240px;
-    }
-
-    .item_style img {
-        width: 99%;
-    }
-}
-
-@media(max-width: 1610px){
-    .post-button {
-        width: 20%;
-    }
-
-    .item_style {
-        width: 90%;
-        height: 75%;
-    }
-}
-
-@media(max-width: 1400px) {
-    .post-button {
-        width: 30%;
-        margin: 1%;
-    }
-}
-
-@media(max-width: 1280px){
-    .post-button {
-        width: 49%;
-    }
-
-    .item_style {
-        width: 90%;
-    }
-}
-
-@media(max-width: 610px){
-    .post-button {
-        width: 100%;
-    }
-
-    .item_style {
-        width: 100%;
-    }
+.card {
+    padding: 5px;
 }
