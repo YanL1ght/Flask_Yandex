@@ -3,6 +3,7 @@ from flask_login import LoginManager
 from data.db_session import *
 from data.users import User
 from Blueprints import BP_home, BP_log, BP_registration, BP_catalog, BP_add_product, BP_product, BP_cart
+from os import environ
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key_for_web_prodject'
@@ -28,4 +29,5 @@ if __name__ == '__main__':
     app.register_blueprint(BP_product.blueprint)
     app.register_blueprint(BP_cart.blueprint)
 
-    app.run(port=8080, host='127.0.0.1')
+    port = int(environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)

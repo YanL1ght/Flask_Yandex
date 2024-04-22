@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 from data.db_session import *
 from data.product import Products
 from data.users import User
-from main import app
+from server import app
 
 blueprint = Blueprint(
     'add_product',
