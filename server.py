@@ -2,7 +2,7 @@ from flask import Flask
 from flask_login import LoginManager
 from data.db_session import *
 from data.users import User
-from Blueprints import BP_home, BP_log, BP_registration, BP_catalog, BP_add_product, BP_product, BP_cart
+from Blueprints import BP_home, BP_log, BP_registration, BP_catalog, BP_add_product, BP_product, BP_cart, BP_other
 from os import environ
 
 app = Flask(__name__)
@@ -28,6 +28,7 @@ if __name__ == '__main__':
     app.register_blueprint(BP_add_product.blueprint)
     app.register_blueprint(BP_product.blueprint)
     app.register_blueprint(BP_cart.blueprint)
+    app.register_blueprint(BP_other.blueprint)
 
     port = int(environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='127.0.0.1', port=port)  # '0.0.0.0'

@@ -4,31 +4,35 @@
     <link rel="stylesheet" href="../../static/css_files/css_catalog.css">
     <main>
             <div class="post-itm" style="display: flex; ">
-                {% for items in lst %}
-                  {% for item in items.keys() %}
-                    {% set file = item.files.split(':')[0] %}
-                    <a href="/product/{{item.id}}" class="linki" style="text-decoration: none;"> <!-- post-button --->
-                              <div class="card" style="width: 18rem;">
-                                  <img src="static/img/product's_image/{{file}}" class="card-img-top" alt="{{file}}">
-                                  <div class="card-body">
-                                      {% if items[item][0] > 35 %}
-                                    <h5 class="card-title">{{ item.title[:34] }}...</h5>
-                                        {% else %}
-                                    <h5 class="card-title">{{ item.title }}</h5>
-                                        {% endif %}
-                                      {% if items[item][1] > 65%}
-                                        <p class="card-text">{{ item.description[:64] }}...</p>
-                                      {% else %}
-                                        <p class="card-text">{{ item.description }}</p>
-                                      {% endif %}
+                {% if lst %}
+                    {% for items in lst %}
+                      {% for item in items.keys() %}
+                        {% set file = item.files.split(':')[0] %}
+                        <a href="/product/{{item.id}}" class="linki" style="text-decoration: none;"> <!-- post-button --->
+                                  <div class="card" style="width: 18rem;">
+                                      <img src="static/img/product's_image/{{file}}" class="card-img-top" alt="{{file}}">
+                                      <div class="card-body">
+                                          {% if items[item][0] > 35 %}
+                                        <h5 class="card-title">{{ item.title[:34] }}...</h5>
+                                            {% else %}
+                                        <h5 class="card-title">{{ item.title }}</h5>
+                                            {% endif %}
+                                          {% if items[item][1] > 65%}
+                                            <p class="card-text">{{ item.description[:64] }}...</p>
+                                          {% else %}
+                                            <p class="card-text">{{ item.description }}</p>
+                                          {% endif %}
+                                      </div>
+                                      <div class="card-body">
+                                        <a class="card-link" style="text-decoration: none;">{{ item.prise }}</a>
+                                      </div>
                                   </div>
-                                  <div class="card-body">
-                                    <a class="card-link" style="text-decoration: none;">{{ item.prise }}</a>
-                                  </div>
-                              </div>
-                     </a>
-                  {% endfor %}
-                {% endfor %}
+                         </a>
+                      {% endfor %}
+                    {% endfor %}
+                {% else %}
+                    <h2>Тут пусто</h2>
+                {% endif %}
             </div>
     </main>
 {% endblock %}

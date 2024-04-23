@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17df4f87-2eac-4602-8260-f9addaa9826c" name="Changes" comment=" Добавлена корзина, таблица в бд и ещё что-то">
-      <change afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Flask_YandexGit.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="17df4f87-2eac-4602-8260-f9addaa9826c" name="Changes" comment="Настройка Glitch">
+      <change afterPath="$PROJECT_DIR$/.gitignore/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blueprints/BP_other.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blueprints/BP_add_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blueprints/BP_add_product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/db/database.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/image (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/html_files/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/html_files/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/html_files/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/html_files/cart.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -40,6 +38,7 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2ePjnhCtHDMhgXQaAL3bU24tNrd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,12 +55,34 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\PycharmProjects\Flask_YandexGit" />
+      <recent name="C:\Users\User\PycharmProjects\Flask_YandexGit\.gitignore" />
       <recent name="C:\Users\User\PycharmProjects\Flask_YandexGit\static\img" />
       <recent name="C:\Users\User\PycharmProjects\Flask_YandexGit\templates" />
       <recent name="C:\Users\User\PycharmProjects\Flask_YandexGit\static" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.server">
+  <component name="RunManager" selected="Python.server (1)">
+    <configuration name="server (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Flask_YandexGit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Flask_YandexGit" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,6 +148,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.server (1)" />
         <item itemvalue="Python.server" />
         <item itemvalue="Python.simply_functions" />
         <item itemvalue="Python.users" />
@@ -219,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713812495048</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Настройка Glitch">
+      <created>1713814559876</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713814559876</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,6 +284,7 @@
     <MESSAGE value="Улучшено система добавления продуктов, начало работы над каталогом товаров и странацами продуктов" />
     <MESSAGE value=" Просто надо" />
     <MESSAGE value=" Добавлена корзина, таблица в бд и ещё что-то" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Добавлена корзина, таблица в бд и ещё что-то" />
+    <MESSAGE value="Настройка Glitch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Настройка Glitch" />
   </component>
 </project>

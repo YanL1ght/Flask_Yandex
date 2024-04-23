@@ -29,7 +29,7 @@ def add_product():
         form = ProductsForm()
         if form.submit.data:
             db_sess = create_session()
-            user_id = db_sess.query(User.id).filter(User.name == request.cookies.get('User')).first()[0]
+            user_id = db_sess.query(User.id).filter(User.name == current_user.name).first()[0]
             files = request.files.getlist("file")
             if len(files) > 5:
                 return render_template('html_files/add_product.html', form=form,
