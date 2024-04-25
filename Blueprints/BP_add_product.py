@@ -14,8 +14,8 @@ blueprint = Blueprint(
     template_folder='templates'
 )
 
-UPLOAD_FOLDER = "static/img/product's_image"
-ALLOWED_EXTENSIONS = ['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'webp']
+UPLOAD_FOLDER = "static/img/product's_image"  # путь, куда надо сохранять картинки
+ALLOWED_EXTENSIONS = ['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'webp']  # поддерживаемые расширения
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 

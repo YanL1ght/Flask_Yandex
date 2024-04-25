@@ -13,9 +13,9 @@ blueprint = Blueprint(
 @blueprint.route('/catalog', methods=["GET", 'POST'])
 def search():
     if request.method == 'GET':
-        search_words = request.args.get('q')
+        search_words = request.args.get('q')  # получение значения q из url запроса
         db_sess = create_session()
-        if not search_words:
+        if not search_words:  # если нет значения q
             data = db_sess.query(Products).all()
         else:
             search_words = " ".join(search_words.split('+'))
@@ -23,6 +23,6 @@ def search():
         lst = {i: (len(i.title), len(i.description)) for i in data}
         return render_template('/html_files/catalog.html', items=lst)
 
-    if request.method == 'POST':
+    if request.method == 'POST':  # если нажата кнопка поиска
         return redirect(f'/catalog?q={"+".join(request.form["search_input"].split())}')
 

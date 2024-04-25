@@ -8,5 +8,5 @@ blueprint = Blueprint(
 
 
 @blueprint.route('/')
-def home():
+def home():  # ¯\_(ツ)_/¯
     return render_template('/html_files/main.html')

@@ -13,7 +13,7 @@ blueprint = Blueprint(
 )
 
 
-@blueprint.route('/login', methods=['GET', 'POST'])
+@blueprint.route('/login', methods=['GET', 'POST'])  # вход
 def login():
     form = LoginForm()
     if form.validate_on_submit():
@@ -31,7 +31,7 @@ def login():
 
 @blueprint.route('/logout')
 @login_required
-def logout():
+def logout():  # выход
     redi = redirect("/")
     logout_user()
     return redi

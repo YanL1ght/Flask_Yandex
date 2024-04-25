@@ -25,7 +25,7 @@ def registration():
                 if len(password) >= 8:
                     if password == form.password2.data:
                         red = redirect("/")
-
+                        # параметры для добавления данных в бд
                         new_user = User()
                         new_user.name = form.name.data
                         new_user.email = form.email.data
@@ -33,7 +33,7 @@ def registration():
 
                         db_sess.add(new_user)
                         db_sess.commit()
-
+                        # для создания новой строки с пустым значением products
                         cart = Cart()
                         cart.user_id = db_sess.query(User.id).filter(User.name == new_user.name).first()[0]
                         cart.products = ''

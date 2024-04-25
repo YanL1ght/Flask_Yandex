@@ -19,7 +19,7 @@ def render_product(id_p):
     if request.method == 'GET':
         if not product:
             return 'такого нету'
-        params = {
+        params = {  # словарь из параметров
             "title": product.title,
             'user': db_sess.query(User).filter(User.id == product.user_id).first().name,
             'price': product.prise,

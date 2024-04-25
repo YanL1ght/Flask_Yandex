@@ -4,8 +4,8 @@ from wtforms.validators import DataRequired
 
 
 class ProductsForm(FlaskForm):
-    title = StringField('Название', validators=[DataRequired()])
-    description = TextAreaField("Описание", validators=[DataRequired()])
-    prise = FloatField("Цена", validators=[DataRequired()])
-    file = StringField('Выбирете фотографию вашего товара')
-    submit = SubmitField('Применить')
+    title = StringField('Название', validators=[DataRequired()])  # вводится название товара
+    description = TextAreaField("Описание", validators=[DataRequired()])  # вводится описание товара
+    prise = FloatField("Цена", validators=[DataRequired()])  # вводится цена товара
+    file = StringField('Выбирете фотографию вашего товара')  # вводится фоточки
+    submit = SubmitField('Применить')  # кнопка принять

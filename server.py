@@ -20,7 +20,7 @@ def load_user(user_id):
 
 if __name__ == '__main__':
     global_init('db/database.sqlite')
-
+    #  импорты bluprint'ов
     app.register_blueprint(BP_home.blueprint)
     app.register_blueprint(BP_log.blueprint)
     app.register_blueprint(BP_registration.blueprint)
